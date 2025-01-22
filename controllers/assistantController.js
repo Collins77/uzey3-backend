@@ -106,6 +106,7 @@ const addMessageToThread = async (req, res) => {
                 // Fetch the latest message (which should be the assistant's response)
                 const messagesList = await openai.beta.threads.messages.list(thread.threadId);
                 const latestMessages = messagesList.body.data.slice(-2); // Get the last two messages (user + assistant)
+                console.log(latestMessages)
 
                 
 
